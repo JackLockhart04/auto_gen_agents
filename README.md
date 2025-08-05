@@ -30,3 +30,9 @@ Run `deactivate`
 1. `autogen-agentchat`
 2. `autogen-ext[openai]`
 3. `autogenstudio`
+
+# Github
+
+1. Run `git add .` to add all changed files
+2. Run `git commit -m <message>` to commit to local repo
+3. Run `git push origin main` to push to main branch
