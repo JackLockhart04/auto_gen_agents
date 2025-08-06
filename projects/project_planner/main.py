@@ -9,7 +9,7 @@ from src.models import LLAMA_3_1_8B_CONCISE
 # Import our organized modules
 from agents import create_all_agents
 from conversation import create_selector_group_chat, create_initial_task
-from utils import process_conversation_stream, print_conversation_summary
+from src.utils.message_printing import process_conversation_stream, print_conversation_summary
 
 
 async def main():

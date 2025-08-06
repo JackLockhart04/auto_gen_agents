@@ -1,18 +1,19 @@
-# Prefab model configuration to create a model client
-
+# Single agent example
 
 import asyncio
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), '../..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
+import asyncio
 from autogen_agentchat.agents import AssistantAgent
 from autogen_ext.models.openai import OpenAIChatCompletionClient
-from src.models import LLAMA_3_1_8B
+
+from ollama_qwen import QWEN_2_5VL_7B
 
 async def main() -> None:
-    # Create model client using the prefab configuration
-    model_client = OpenAIChatCompletionClient(**LLAMA_3_1_8B)
+    # Create model client for Ollama
+    model_client = OpenAIChatCompletionClient(**QWEN_2_5VL_7B)
     
     # Create assistant agent
     agent = AssistantAgent("assistant", model_client=model_client)
